@@ -3,6 +3,23 @@ body {
 }
 
 #clockDisplay {
-    color: white;
+    color: #1500ff;
+    position: absolute; /* We want to posiiton this element exactlyon the screne where we wan it */
+    top: 50%; /* Move element down 50% of the height of the parent */
+    left: 50%; /* Move element right 50 % of the width of the parent */
+    transform: translateX(-50%) translateY(-50%); /* Move the element 50% of it's width to left and 50% of it's height up */
+    font-size: 60px;
+    font-family: 'MedievalSharp', cursive;
 }
+#dateDisplay {
+    color: #1500ff;
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translateX(-60%) translateY(-60%);
+    font-size: 60px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+
 
