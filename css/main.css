@@ -1,5 +1,26 @@
 body {
     background-color: white;
+    margin: 0;
+}
+
+.headerContainer {
+    background-color: #1500ff;
+}
+
+.headerContainer a {
+    /* Remember that this targets anchor elements inside any element using the headerContainer classf */
+    padding: 16px 18px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.headerContainer a:hover {
+    /* Change the styling for the anchor elements inside the headerContainer class when we mouse over them */
+    background-color: black;
+    color: #1500ff;
+    transform: rotate(180deg);
+    transition-duration: 2s;
 }
 
 #clockDisplay {
