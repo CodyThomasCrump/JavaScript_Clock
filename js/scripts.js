@@ -9,11 +9,13 @@ function showTime() {
     var hour = date.getHours(); // 0-23
     var minute = date.getMinutes(); // 0-59
     var seconds = date.getSeconds(); // 0-59
+    /*
     var month = date.getMonth();
     var day = date.getDate();
-    var year = date.getFullYear(); 
+    var year = date.getFullYear();
+    */
     var period = "AM"; // We're going to assume that we're in AM to start
-    
+
     // We need to make sure the hour is properly represented in 12-hr time, and we also need to determine whether we should display AM or PM
 
     // With our hours being between 0 and 23, 0 would equal 12AM and everything 12 0r above is a PM hour
@@ -38,15 +40,75 @@ function showTime() {
     minute = (minute < 10) ? ("0" + minute) : minute;
 
     seconds = (seconds < 10) ? ("0" + seconds) : seconds;
-    
+
     // String to store the current time
     var time = hour + ":" + minute + ":" + seconds + " " + period;
-    var currentDate = month + "/" + day + "/" + year;
+    // var currentDate = month + "/" + day + "/" + year;
 
     document.getElementById("clockDisplay").innerText = time;
-    document.getElementById("dateDisplay").innerText = currentDate;
+    // document.getElementById("dateDisplay").innerText = currentDate;
+
+    // GETTING THE DATE
+
+    var dayOfWeek = date.getDay(); // Returns a value between 0 and 6 that corresponds to the current day of the week
+    var dayOfMonth = date.getDate(); // Returns the current day in the month (1 -31)
+    var month = date.getMonth(); // Returns a value between 0 and 11 that corresponds to the current month
+
+    var date = getDayOfTheWeek(dayOfWeek) + "," + getMonth(month) + " " + dayOfMonth
+
+    document.getElementById("dateDisplay").innerText = date;
+    
 
     setTimeout(showTime, 1000); // Schedule the showTime function to be called after 1000 ms (1 second)
+}
+
+// Function to take in a number from 0-6 and return the proper day name
+function getDayOfTheWeek(dayNum) {
+    switch (dayNum) {
+        case 0:
+            return "Sunday";
+        case 1:
+            return "Monday";
+        case 2:
+            return "Tuesday";
+        case 3:
+            return "Wednseday";
+        case 4:
+            return "Thursday";
+        case 5:
+            return "Friday";
+        case 6:
+            return "Saturday";
+    }
+}
+
+function getMonth(monthNum) {
+    switch (monthNum) {
+        case 0:
+            return "January";
+        case 1:
+            return "February";
+        case 2:
+            return "March";
+        case 3:
+            return "April";
+        case 4:
+            return "May";
+        case 5:
+            return "June";
+        case 6:
+            return "July";
+        case 7:
+            return "August";
+        case 8:
+            return "September";
+        case 9:
+            return "October";
+        case 10:
+            return "November";
+        case 11:
+            return "December";
+    }
 }
 
 showTime();

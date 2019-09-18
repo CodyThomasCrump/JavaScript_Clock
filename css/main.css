@@ -1,25 +1,46 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 
 #clockDisplay {
     color: #1500ff;
-    position: absolute; /* We want to posiiton this element exactlyon the screne where we wan it */
+    position: absolute; /* We want to posiiton this element exactly on the screen where we want it */
     top: 50%; /* Move element down 50% of the height of the parent */
     left: 50%; /* Move element right 50 % of the width of the parent */
     transform: translateX(-50%) translateY(-50%); /* Move the element 50% of it's width to left and 50% of it's height up */
     font-size: 60px;
-    font-family: 'MedievalSharp', cursive;
+    font-family: 'Inconsolata', monospace;
 }
+
 #dateDisplay {
+    color: #1500ff;
+    position: absolute; /* We want to posiiton this element exactly on the screen where we want it */
+    top: 60%; /* Move element down 60% of the height of the parent */
+    left: 50%; /* Move element right 50 % of the width of the parent */
+    transform: translateX(-50%) translateY(-50%); /* Move the element 50% of it's width to left and 50% of it's height up */
+    font-size: 40px;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+/* #dateDisplay {
     color: #1500ff;
     position: absolute; 
     top: 60%; 
-    left: 50%; 
+    left: 52%; 
     transform: translateX(-60%) translateY(-60%);
     font-size: 60px;
-    font-family: 'MedievalSharp', cursive;
-}
+    font-family: 'Inconsolata', monospace;
+} */
 
+/* #githubLink {
+    float: right;
+    font-family: 'Inconsolata', monospace;
+} */
+
+/* #linkedinLink {
+    float: left;
+    font-family: 'Inconsolata', monospace;
+} */
 
 
